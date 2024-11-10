@@ -1,229 +1,231 @@
 <!DOCTYPE html>
 <html lang="pt-Pt">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title> Conversor de medidas e pesos bíblicos </title>
-		<link rel="stylesheet" href="normalize.css">
-		<link rel="stylesheet" href="sakura.css">
-		<link rel="stylesheet" href="estilos.css">
-		<script src="scripts.js"> </script>
-	</head>
-	
-	<body>
-		<h1> Conversor de medidas e pesos bíblicos </h1>
-		<section>
-			<h3> Líquidos </h3>
-			<div>
-				<p> Coro ⇔ 10 batos ⇔ 60 blogues = 220 l </p>
-				<input type="number" name="coro" id="numero_coro" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_coro()">
-				<p class="resultado" id="resultado_coro">   </p>
-			</div>
-			
-			<div>
-				<p> Bato ⇔ 6 hins = 22 l </p>
-				<input type="number" name="bato" id="numero_bato" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_bato()">
-				<p class="resultado" id="resultado_bato"> </p>
-			</div>
-			
-			<div>
-				<p> Him ⇔ 12 Logues = 3,67 l </p>
-				<input type="number" name="him" id="numero_him" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_him()">
-				<p class="resultado" id="resultado_him"> </p>
-			</div>
-			
-			<div>
-				<p> Logue ⇔ 1⁄12 him = 0,31 l </p>
-				<input type="number" name="logue" id="numero_logue" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_logue()">
-				<p class="resultado" id="resultado_logue"> </p>
-			</div>
-		</section>
-		
-		<section>
-			<h3> Secos </h3>
-			<div>
-				<p> Hómer ⇔ 1 coro ⇔ 10 Efas = 220 l </p>
-				<input type="number" name="homer" id="numero_homer" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_homer()">
-				<p class="resultado" id="resultado_homer"> </p>
-			</div>
-			
-			<div>
-				<p> Efa ⇔ 3 seás ⇔ 10 gomores = 22 l </p>
-				<input type="number" name="efa" id="numero_efa" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_efa()">
-				<p class="resultado" id="resultado_efa"> </p>
-			</div>
-			
-			<div>
-				<p> Seá (3 1⁄3 gomores) 7,33 l </p>
-				<input type="number" name="sea" id="numero_sea" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_sea()">
-				<p class="resultado" id="resultado_sea"> </p>
-			</div>
-			
-			<div>
-				<p> Gomor (1 4⁄5 cabo) 2,2 l </p>
-				<input type="number" name="gomor" id="numero_gomor" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_gomor()">
-				<p class="resultado" id="resultado_gomor"> </p>
-			</div>
-			
-			<div>
-				<p> Cabo 1,22 l </p>
-				<input type="number" name="cabo" id="numero_cabo" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_cabo()">
-				<p class="resultado" id="resultado_cabo"> </p>
-			</div>
-			
-			<div>
-				<p> Queniz 1,08 l </p>
-				<input type="number" name="queniz" id="numero_queniz" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_queniz()">
-				<p class="resultado" id="resultado_queniz"> </p>
-			</div>
-		</section>
-		
-		<section>
-			<h3> Medidas Lineares </h3>
-			<div>
-				<p> Cana longa (6 côvados longos) 3,11 m </p>
-				<input type="number" name="cana_longa" id="numero_cana_longa" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_cana_longa()">
-				<p class="resultado" id="resultado_cana_longa"> </p>
-			</div>
-			
-			<div>
-				<p> Cana (6 côvados) 2,67 m </p>
-				<input type="number" name="cana" id="numero_cana" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_cana()">
-				<p class="resultado" id="resultado_cana"> </p>
-			</div>
-			
-			<div>
-				<p> Braça 1,8 m </p>
-				<input type="number" name="braca" id="numero_braca" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_braca()">
-				<p class="resultado" id="resultado_braca"> </p>
-			</div>
-			
-			<div>
-				<p> Côvado longo (7 larguras da mão) 51,8 cm </p>
-				<input type="number" name="covado_longo" id="numero_covado_longo" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_covado_longo()">
-				<p class="resultado" id="resultado_covado_longo"> </p>
-			</div>
-			
-			<div>
-				<p> Côvado (2 palmos / 6 larguras da mão) 44,5 cm </p>
-				<input type="number" name="covado" id="numero_covado" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_covado()">
-				<p class="resultado" id="resultado_covado"> </p>
-			</div>
-			
-			<div>
-				<p> Côvado curto 38 cm </p>
-				<input type="number" name="covado_curto" id="numero_covado_curto" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_covado_curto()">
-				<p class="resultado" id="resultado_covado_curto"> </p>
-			</div>
-			
-			<div>
-				<p> Estádio romano 1⁄8 milha romana=185 m </p>
-				<input type="number" name="estadio" id="numero_estadio" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_estadio()">
-				<p class="resultado" id="resultado_estadio"> </p>
-			</div>
-			
-			<div>
-				<p> Dedo (1⁄4 largura da mão) 1,85 cm </p>
-				<input type="number" name="dedo" id="numero_dedo" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_dedo()">
-				<p class="resultado" id="resultado_dedo"> </p>
-			</div>
-			
-			<div>
-				<p> Largura da mão (4 dedos) 7,4 cm </p>
-				<input type="number" name="largura_mao" id="numero_largura_mao" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_largura_mao()">
-				<p class="resultado" id="resultado_largura_mao"> </p>
-			</div>
-			
-			<div>
-				<p> Palmo (3 larguras da mão) 22,2 cm </p>
-				<input type="number" name="palmo" id="numero_palmo" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_palmo()">
-				<p class="resultado" id="resultado_palmo"> </p>
-			</div>
-		</section>
-		
-		<h2> Dinheiro e Pesos </h2>
-		<section>
-			<h3> Escrituras Hebraicas </h3>
-			<div>
-				<p> Gera (1⁄20 siclo) 0,57 g 10 geras = 1 beca </p>
-				<input type="number" name="gera" id="numero_gera" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_gera()">
-				<p class="resultado" id="resultado_gera"> </p>
-			</div>
-			
-			<div>
-				<p> Beca 5,7 g 2 becas = 1 Siclo </p>
-				<input type="number" name="beca" id="numero_beca" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_beca()">
-				<p class="resultado" id="resultado_beca"> </p>
-			</div>
-			
-			<div>
-				<p> Pim 7,8 g 1 pim = 2⁄3 Siclo </p>
-				<input type="number" name="pim" id="numero_pim" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_pim()">
-				<p class="resultado" id="resultado_pim"> </p>
-			</div>
-			
-			<div>
-				<p> Siclo 11,4 g 50 siclos = 1 mina </p>
-				<input type="number" name="siclo" id="numero_siclo" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_siclo()">
-				<p class="resultado" id="resultado_siclo"> </p>
-			</div>
-			
-			<div>
-				<p> Mina 570 g 60 minas = 1 talento </p>
-				<input type="number" name="mina" id="numero_mina" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_mina()">
-				<p class="resultado" id="resultado_mina"> </p>
-			</div>
-			
-			<div>
-				<p> Talento 34,2 kg </p>
-				<input type="number" name="talento" id="numero_talento" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_talento()">
-				<p class="resultado" id="resultado_talento"> </p>
-			</div>
-			
-			<div>
-				<p> Darico (moeda persa de ouro) 8,4 g Esdras 8:27 </p>
-				<input type="number" name="darico" id="numero_darico" placeholder="Insira um número">
-				<input type="button" value="Calcular" onclick="calcular_darico()">
-				<p class="resultado" id="resultado_darico"> </p>
-			</div>
-		</section>
-		
-		<section>
-			<h3> Escrituras Gregas </h3>
-			<p> Lépton (moeda judaica de cobre ou de bronze) 1⁄2 quadrante Lucas 21:2 </p>
-			<p> Quadrante (moeda romana de cobre ou de bronze) 2 léptons Mateus 5:26 </p>
-			<p> Assário (moeda romana e provincial de cobre ou de bronze) 4 quadrantes Mateus 10:29 </p>
-			<p> Denário (moeda romana de prata) 64 quadrantes 3,85 g Mateus 20:10 = salário de um dia (12 horas) </p>
-			<p> Dracma (moeda grega de prata) 3,4 g Lucas 15:8 = salário de um dia (12 horas) </p>
-			<p> Didracma (moeda grega de prata) 2 dramas 6,8 g Mateus 17:24 = salário de dois dias </p>
-			<p> Tetradracma (moeda grega de prata, também chamada estáter de prata) 4 dramas 13,6 g Mateus 17:27 = salário de quatro dias </p>
-		</section>
-	</body>
-</html>		
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Conversor de medidas e pesos bíblicos </title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="sakura.css">
+	<link rel="stylesheet" href="estilos.css">
+	<script src="scripts.js"> </script>
+</head>
+
+<body>
+	<h1> Conversor de medidas e pesos bíblicos </h1>
+	<section>
+		<h3> Líquidos </h3>
+		<div>
+			<p> Coro ⇔ 10 batos ⇔ 60 blogues = 220 l </p>
+			<input type="number" name="coro" id="numero_coro" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_coro()">
+			<p class="resultado" id="resultado_coro"> </p>
+		</div>
+
+		<div>
+			<p> Bato ⇔ 6 hins = 22 l </p>
+			<input type="number" name="bato" id="numero_bato" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_bato()">
+			<p class="resultado" id="resultado_bato"> </p>
+		</div>
+
+		<div>
+			<p> Him ⇔ 12 Logues = 3,67 l </p>
+			<input type="number" name="him" id="numero_him" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_him()">
+			<p class="resultado" id="resultado_him"> </p>
+		</div>
+
+		<div>
+			<p> Logue ⇔ 1⁄12 him = 0,31 l </p>
+			<input type="number" name="logue" id="numero_logue" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_logue()">
+			<p class="resultado" id="resultado_logue"> </p>
+		</div>
+	</section>
+
+	<section>
+		<h3> Secos </h3>
+		<div>
+			<p> Hómer ⇔ 1 coro ⇔ 10 Efas = 220 l </p>
+			<input type="number" name="homer" id="numero_homer" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_homer()">
+			<p class="resultado" id="resultado_homer"> </p>
+		</div>
+
+		<div>
+			<p> Efa ⇔ 3 seás ⇔ 10 gomores = 22 l </p>
+			<input type="number" name="efa" id="numero_efa" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_efa()">
+			<p class="resultado" id="resultado_efa"> </p>
+		</div>
+
+		<div>
+			<p> Seá (3 1⁄3 gomores) 7,33 l </p>
+			<input type="number" name="sea" id="numero_sea" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_sea()">
+			<p class="resultado" id="resultado_sea"> </p>
+		</div>
+
+		<div>
+			<p> Gomor (1 4⁄5 cabo) 2,2 l </p>
+			<input type="number" name="gomor" id="numero_gomor" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_gomor()">
+			<p class="resultado" id="resultado_gomor"> </p>
+		</div>
+
+		<div>
+			<p> Cabo 1,22 l </p>
+			<input type="number" name="cabo" id="numero_cabo" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_cabo()">
+			<p class="resultado" id="resultado_cabo"> </p>
+		</div>
+
+		<div>
+			<p> Queniz 1,08 l </p>
+			<input type="number" name="queniz" id="numero_queniz" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_queniz()">
+			<p class="resultado" id="resultado_queniz"> </p>
+		</div>
+	</section>
+
+	<section>
+		<h3> Medidas Lineares </h3>
+		<div>
+			<p> Cana longa (6 côvados longos) 3,11 m </p>
+			<input type="number" name="cana_longa" id="numero_cana_longa" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_cana_longa()">
+			<p class="resultado" id="resultado_cana_longa"> </p>
+		</div>
+
+		<div>
+			<p> Cana (6 côvados) 2,67 m </p>
+			<input type="number" name="cana" id="numero_cana" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_cana()">
+			<p class="resultado" id="resultado_cana"> </p>
+		</div>
+
+		<div>
+			<p> Braça 1,8 m </p>
+			<input type="number" name="braca" id="numero_braca" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_braca()">
+			<p class="resultado" id="resultado_braca"> </p>
+		</div>
+
+		<div>
+			<p> Côvado longo (7 larguras da mão) 51,8 cm </p>
+			<input type="number" name="covado_longo" id="numero_covado_longo" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_covado_longo()">
+			<p class="resultado" id="resultado_covado_longo"> </p>
+		</div>
+
+		<div>
+			<p> Côvado (2 palmos / 6 larguras da mão) 44,5 cm </p>
+			<input type="number" name="covado" id="numero_covado" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_covado()">
+			<p class="resultado" id="resultado_covado"> </p>
+		</div>
+
+		<div>
+			<p> Côvado curto 38 cm </p>
+			<input type="number" name="covado_curto" id="numero_covado_curto" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_covado_curto()">
+			<p class="resultado" id="resultado_covado_curto"> </p>
+		</div>
+
+		<div>	
+			<p> Estádio romano 1⁄8 milha romana=185 m </p>
+			<input type="number" name="estadio" id="numero_estadio" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_estadio()">
+			<p class="resultado" id="resultado_estadio"> </p>
+		</div>
+
+		<div>
+			<p> Dedo (1⁄4 largura da mão) 1,85 cm </p>
+			<input type="number" name="dedo" id="numero_dedo" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_dedo()">
+			<p class="resultado" id="resultado_dedo"> </p>
+		</div>
+
+		<div>
+			<p> Largura da mão (4 dedos) 7,4 cm </p>
+			<input type="number" name="largura_mao" id="numero_largura_mao" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_largura_mao()">
+			<p class="resultado" id="resultado_largura_mao"> </p>
+		</div>
+
+		<div>
+			<p> Palmo (3 larguras da mão) 22,2 cm </p>
+			<input type="number" name="palmo" id="numero_palmo" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_palmo()">
+			<p class="resultado" id="resultado_palmo"> </p>
+		</div>
+	</section>
+
+	<h2> Dinheiro e Pesos </h2>
+	<section>
+		<h3> Escrituras Hebraicas </h3>
+		<div>
+			<p> Gera (1⁄20 siclo) 0,57 g 10 geras = 1 beca </p>
+			<input type="number" name="gera" id="numero_gera" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_gera()">
+			<p class="resultado" id="resultado_gera"> </p>
+		</div>
+
+		<div>
+			<p> Beca 5,7 g 2 becas = 1 Siclo </p>
+			<input type="number" name="beca" id="numero_beca" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_beca()">
+			<p class="resultado" id="resultado_beca"> </p>
+		</div>
+
+		<div>
+			<p> Pim 7,8 g 1 pim = 2⁄3 Siclo </p>
+			<input type="number" name="pim" id="numero_pim" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_pim()">
+			<p class="resultado" id="resultado_pim"> </p>
+		</div>
+
+		<div>
+			<p> Siclo 11,4 g 50 siclos = 1 mina </p>
+			<input type="number" name="siclo" id="numero_siclo" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_siclo()">
+			<p class="resultado" id="resultado_siclo"> </p>
+		</div>
+
+		<div>
+			<p> Mina 570 g 60 minas = 1 talento </p>
+			<input type="number" name="mina" id="numero_mina" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_mina()">
+			<p class="resultado" id="resultado_mina"> </p>
+		</div>
+
+		<div>
+			<p> Talento 34,2 kg </p>
+			<input type="number" name="talento" id="numero_talento" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_talento()">
+			<p class="resultado" id="resultado_talento"> </p>
+		</div>
+
+		<div>
+			<p> Darico (moeda persa de ouro) 8,4 g Esdras 8:27 </p>
+			<input type="number" name="darico" id="numero_darico" placeholder="Insira um número">
+			<input type="button" value="Calcular" onclick="calcular_darico()">
+			<p class="resultado" id="resultado_darico"> </p>
+		</div>
+	</section>
+
+	<section>
+		<h3> Escrituras Gregas </h3>
+		<p> Lépton (moeda judaica de cobre ou de bronze) 1⁄2 quadrante Lucas 21:2 </p>
+		<p> Quadrante (moeda romana de cobre ou de bronze) 2 léptons Mateus 5:26 </p>
+		<p> Assário (moeda romana e provincial de cobre ou de bronze) 4 quadrantes Mateus 10:29 </p>
+		<p> Denário (moeda romana de prata) 64 quadrantes 3,85 g Mateus 20:10 = salário de um dia (12 horas) </p>
+		<p> Dracma (moeda grega de prata) 3,4 g Lucas 15:8 = salário de um dia (12 horas) </p>
+		<p> Didracma (moeda grega de prata) 2 dramas 6,8 g Mateus 17:24 = salário de dois dias </p>
+		<p> Tetradracma (moeda grega de prata, também chamada estáter de prata) 4 dramas 13,6 g Mateus 17:27 = salário de quatro dias </p>
+	</section>
+</body>
+
+</html>

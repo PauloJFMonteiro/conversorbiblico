@@ -1,6 +1,4 @@
-/* html, body {
-    font-size: 1em;
-}
+@charset="utf-8";
 
 body {
     margin: 0 5%;
@@ -8,4 +6,8 @@ body {
 
 h1, h2, h3 {
     text-align: center;
-} */
+}
+
+p {
+	vertical-align: middle;
+}
